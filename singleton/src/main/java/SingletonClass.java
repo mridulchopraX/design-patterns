@@ -3,7 +3,7 @@ public class SingletonClass {
     private String stringProperty;
     private Integer integerProperty;
 
-    private static SingletonClass instance;
+    private static SingletonClass instance; // we can initialize here as well but that will not be lazy initialization.
 
     private SingletonClass(String stringProperty, Integer integerProperty) {
         // private constructor
@@ -21,7 +21,7 @@ public class SingletonClass {
 
     public static SingletonClass getInstance(String stringProperty, Integer integerProperty) {
         if (instance == null) {
-            instance = new SingletonClass(stringProperty, integerProperty);
+            instance = new SingletonClass(stringProperty, integerProperty); // this is lazy initialization
         }
         return instance;
     }
