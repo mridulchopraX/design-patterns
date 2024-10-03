@@ -1,0 +1,2 @@
+# Ignore all target folders in all modules
+**/target/
